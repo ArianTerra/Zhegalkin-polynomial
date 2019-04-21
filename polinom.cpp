@@ -15,22 +15,38 @@
 #include <string.h>
 /**
 * @brief  Определение корректности ввода целочисленных данных
-* @author Артем Середюк
-* @date   23.03.2019
 * @param  min Минимальное допустимое значение для ввода
 * @param  max Максимальное допустимое значение для ввода
 * @return Корректное int число в пределах min-max
 * При неправильном вводе будет запрошен повторный ввод.
 */
 int getNumber(int min, int max);
-
+/**
+* @brief  Вычисление полинома
+* @param  vars		  кол-во переменных
+* @param  vector	  массив значений функции
+* @param  MAX    	  кол-во строк в ТИ (размер вектора значений ф-ции)
+* @param  truth_table таблица истинности в виде матрицы
+* @param  LETTER	  набор символов в виде строки
+*/
 void polinom(int vars, int vector[64], const int MAX, int truth_table[64][6],
 	const char* LETTER);
-
+/**
+* @brief  Генерация таблицы
+* @param  vars		  кол-во переменных
+* @param  MAX    	  кол-во строк в ТИ (размер вектора значений ф-ции)
+* @param  table		  матрица для записи в нее ТИ
+*/
 void generateTable(int table[64][6], int vars, int MAX);
-
+/**
+* @brief  Парсер вектора значений из аргумента КС
+* @param  vars		  кол-во переменных
+* @return 0 или 1. -1 если некорректное число/символ (не 0 или 1)
+*/
 int parseInt(char c);
-
+/**
+* @brief  Плашка с названием программы
+*/
 void splash();
 
 int main(int argc, char* argv[]) {
